@@ -1,6 +1,9 @@
 const express = require("express");
 const cors = require("cors");
+const path = require('path');
+
 require("dotenv").config();
+
 
 const userRoutes = require("./routes/userRoutes");
 
@@ -9,6 +12,8 @@ const allowedOrigins = [
     "https://dump-frontend.onrender.com",  // Replace with your actual frontend URL
     "http://localhost:3000" // optional, for local development
   ];
+  
+
   
   app.use(cors({
     origin: function(origin, callback) {
